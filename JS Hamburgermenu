@@ -1,0 +1,12 @@
+
+//-- Selecteer dropdown button element
+var dropdownButton = document.getElementById("dropdown-button");
+
+//-- Eventlistener aan button toevoegen. Als er geklikt wordt, voer dan function dropDown uit.
+dropdownButton.addEventListener("click", dropDown);
+
+function dropDown(){
+	//-- Toggle doet een check of de class bestaat op het element. Zo ja, dan haalt 'ie hem eraf. Zo nee, dan gooit 'ie hem erop.
+	document.getElementById("main-navigation").classList.toggle("opened");
+}
+
