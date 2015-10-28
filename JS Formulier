@@ -1,0 +1,40 @@
+/*jslint browser: true, devel: true, eqeq: true,
+plusplus: true, sloppy: true, vars: true, white: true*/
+
+var checkAanmelden;
+var radioButton = document.querySelectorAll('input[type=radio]');
+var projectField = document.getElementById("project");
+var stageField = document.getElementById("stage");
+
+radioButton[0].addEventListener("click", checkAanmelden);
+radioButton[1].addEventListener("click", checkAanmelden);
+
+checkAanmelden();
+function checkAanmelden()
+{
+    if (radioButton[0].checked == true) // project
+    {
+        console.log("Project is aangevinkt");
+        projectField.style.display = "initial";
+        
+    }
+    else if (radioButton[0].checked == false)
+    {
+        console.log("Project is niet aangevinkt")
+        projectField.style.display = "none";
+    }
+
+    if (radioButton[1].checked == true) // stage
+    {
+        console.log("Stage is aangevinkt");
+        stageField.style.display = "initial";
+        
+    }
+    else if (radioButton[1].checked == false)
+    {
+        console.log("Stage is niet aangevinkt")
+        stageField.style.display = "none";
+    }
+}
+
+
