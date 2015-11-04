@@ -1,6 +1,7 @@
 * {
     padding:0;
     margin:0;
+    box-sizing: border-box;
 }
 
 h2 + img {
@@ -13,15 +14,20 @@ body > header {
     display: block;
 }
 
+body > header > h1 {
+    margin-left: 1em;
+}
+
 body > section {
     padding-top: 2em;
-    padding-left: 0.5em;
+    padding-left: 1em;
 }
 
 header > img {
     width: 25em;
     display: inline;
     margin-left: 2em;
+    background-color: #fecb2f;
 }
 
 header > section {
@@ -37,12 +43,8 @@ h1, h2, h3, h4 {
     color:#fecb2f;
 }
 
-header > h1, h2 {
-    margin-left: 2.5em;
-}
-
-header > p {
-    margin-left: 4em;
+main {
+    padding: 1em;
 }
 
 header > form {
@@ -78,7 +80,11 @@ h1 {
 
 }
 
-header p {
+body >  header:first-child p {
+    margin-left: 2em;
+}
+
+body > header p {
     margin-right: 2em;
 }
 
@@ -112,7 +118,7 @@ nav a {
 
 a {
     text-decoration: none;
-    color: #fecb2f;
+    color: #736F6E;
 }
 
 nav .active a {
@@ -138,6 +144,10 @@ body > main > article > section > video {
 
 body > aside {
     float: right;
+}
+
+aside section {
+    padding-bottom: 1em;
 }
 
 /* article */
@@ -175,6 +185,10 @@ main > article > section {
     position: relative;
     vertical-align: top;
     width: 100%;
+}
+
+main  > article >  section:first-of-type {
+    margin: 0;
 }
 
 main > section > article {
@@ -251,8 +265,6 @@ body > footer > h1 {
     padding-bottom: 1em;
 }
 
-
-
 /* Mediaqueries*/
 
 @media screen and (max-width:60em) {
@@ -278,7 +290,6 @@ body > footer > h1 {
         width: 100%;
         margin: 0 .25em;
     }
-
 
     /* Transitions disablen */
 
@@ -312,7 +323,7 @@ body > footer > h1 {
     body > aside {
         float: left;
         width: 90%;
-        padding-left: 2em;
+        padding-left: 1em;
         margin: 0px;
     }
 
@@ -323,18 +334,28 @@ body > footer > h1 {
 
     header > img,
     picture > img {
-        max-width:100%;
+        max-width:85%;
+        margin-left: 2em;
     }
 
     .related {
         width: 90%;
-        padding-left: 2em;
+        margin-left: 0.9em;
     }
 
     body > footer > section {
         width: 100%;
         flex: 1 100%;
         margin-bottom: 1em;
+    }
+ 
+    main > article > section {
+        margin-left: 0;
+        margin-top: -3em;
+    }
+
+    body > section {
+        padding-left: 0;
     }
 }
 
